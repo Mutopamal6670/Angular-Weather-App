@@ -1,1 +1,8 @@
-<p>search works!</p>
+<h2>Enter city name to search</h2>
+
+<form (ngSubmit)="search()" [formGroup]="userForm">
+    <div>
+        <input type="text" formControlName="city_name"  placeholder="Search for a city...">
+    </div>
+    <button type="submit" [disabled]="userForm.invalid">Enter</button>
+</form>
