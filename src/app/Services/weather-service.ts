@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { catchError, Observable, map, throwError, forkJoin } from 'rxjs';
 import { CurrentWeather } from '../Components/current-weather/current-weather';
 import { Forecast } from '../Components/forecast/forecast';
-import { ForecasteDay, WeatherForecast } from '../Models/weather.model';
+import { CurrentWeatherModel, ForecasteDay, WeatherForecast } from '../Models/weather.model';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
@@ -16,7 +16,7 @@ export class WeatherService {
   private readonly API_KEY = environment.weatherApiKey;
   private readonly BASE_URL = 'https://api.openweathermap.org/data/2.5'
 
-  getWeather(city: string): Observable<{current: CurrentWeather, forecast: WeatherForecast}>{
+  getWeather(city: string): Observable<{current: CurrentWeatherModel, forecast: WeatherForecast}>{
     const current$ = this.getCurrentWeather(city);
     const forecast$ = this.getForecast(city);
 
@@ -32,7 +32,7 @@ export class WeatherService {
    *Fetch current weather from API
    */
 
-   private getCurrentWeather(city: string): Observable<CurrentWeather> { 
+   private getCurrentWeather(city: string): Observable<CurrentWeatherModel> { 
     const url = `${this.BASE_URL}/weather?q=${city}&units=metric&appid=${this.API_KEY}`;
     
     return this.http.get<any>(url).pipe(
@@ -57,7 +57,7 @@ export class WeatherService {
   /**
    * Transform raw current weather JSON into CurrentWeather interface
    */
-  transformCurrent(rawData: any) : CurrentWeather{
+  transformCurrent(rawData: any) : CurrentWeatherModel{
     return {
       city: rawData.name,
       temperature: rawData.main.temp,

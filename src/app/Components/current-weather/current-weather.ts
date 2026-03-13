@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CurrentWeatherModel } from '../../Models/weather.model';
 
 @Component({
   selector: 'app-current-weather',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './current-weather.css',
 })
 export class CurrentWeather {
+  @Input() weather! : CurrentWeatherModel;
+
 
 }

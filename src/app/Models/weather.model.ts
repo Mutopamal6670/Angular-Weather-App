@@ -1,4 +1,4 @@
-export interface CurrentWeather { 
+export interface CurrentWeatherModel { 
     city: string;
     temperature: number;
     description: string;

@@ -1,6 +1,26 @@
 <p>home works!</p>
 <div class="home-container">
     <h1>Simplistic Weather Forecasting</h1>
+
+    <!--Search component-->
     <app-search (citySearch)="searchedCity($event)"></app-search>
+
+    <!--Loading spinner-->
+    <div>
+        @if (loading) {
+            <p>Loading...</p>
+        }
+    </div>
+
+    <!--Error message-->
+    <div>
+        @if (errorMessage) {
+            <p>{{ errorMessage }}</p>
+        }
+    </div>
+
+    <!--Current Weather-->
+    <app-current-weather></app-current-weather>
+    <app-forecast></app-forecast>
 </div>
 
