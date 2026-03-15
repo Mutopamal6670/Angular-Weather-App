@@ -23,6 +23,10 @@
     @if (currentWeather) {
         <app-current-weather [weather]="currentWeather"></app-current-weather>
     }
-    <app-forecast></app-forecast>
+
+    @if (forecast) {
+        <app-forecast [forecast]="forecast"></app-forecast>
+    }
+   
 </div>
 

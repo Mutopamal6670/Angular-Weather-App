@@ -1,1 +1,12 @@
 <p>forecast works!</p>
+
+{{forecast}}
+
+@if(forecast){
+    @for (item of forecast.days; track item.date) {
+        <p>Date: {{item.date | date: 'EEEE'}}</p>
+        <p>Temperature: {{item.temperature}}</p>
+        <p>Description: {{item.description}}</p>
+        <img src="{{item.icon}}" alt="weather icon">
+    }
+}
