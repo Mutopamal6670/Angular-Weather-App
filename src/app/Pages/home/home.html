@@ -20,7 +20,9 @@
     </div>
 
     <!--Current Weather-->
-    <app-current-weather></app-current-weather>
+    @if (currentWeather) {
+        <app-current-weather [weather]="currentWeather"></app-current-weather>
+    }
     <app-forecast></app-forecast>
 </div>
 

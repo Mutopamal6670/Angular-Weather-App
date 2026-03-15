@@ -5,6 +5,7 @@ import { CurrentWeatherModel, WeatherForecast } from '../../Models/weather.model
 import { WeatherService } from '../../Services/weather-service';
 import { Forecast } from "../../Components/forecast/forecast";
 
+
 @Component({
   selector: 'app-home',
   imports: [Search, CurrentWeather, Forecast],
@@ -37,6 +38,8 @@ export class Home {
 
     this.weatherService.getWeather(city).subscribe({
       next: data => {
+        console.log("The returned data is: ");
+        console.log(data);  //for debugging
         this.currentWeather = data.current;
         this.forecast = data.forecast;
         this.loading = false;

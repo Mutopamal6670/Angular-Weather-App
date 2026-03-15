@@ -8,7 +8,7 @@ import { CurrentWeatherModel } from '../../Models/weather.model';
   styleUrl: './current-weather.css',
 })
 export class CurrentWeather {
-  @Input() weather! : CurrentWeatherModel;
+  @Input() weather? : CurrentWeatherModel | null = null;
 
 
 }
