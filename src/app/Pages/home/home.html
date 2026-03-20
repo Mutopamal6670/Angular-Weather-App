@@ -1,32 +1,35 @@
-<p>home works!</p>
 <div class="home-container">
     <h1>Simplistic Weather Forecasting</h1>
 
-    <!--Search component-->
-    <app-search (citySearch)="searchedCity($event)"></app-search>
+    <!--LEFT SIDE -->
+    <div class="main-column">
+        <!--Search component-->
+        <app-search (citySearch)="searchedCity($event)"></app-search>
 
-    <!--Loading spinner-->
-    <div>
+        <!--Loading spinner-->
         @if (loading) {
             <p>Loading...</p>
         }
-    </div>
 
-    <!--Error message-->
-    <div>
+        <!--Current Weather-->
+        @if (currentWeather) {
+            <app-current-weather [weather]="currentWeather"></app-current-weather>
+        }
+
+        <!--Error message-->
         @if (errorMessage) {
             <p>{{ errorMessage }}</p>
         }
+
     </div>
 
-    <!--Current Weather-->
-    @if (currentWeather) {
-        <app-current-weather [weather]="currentWeather"></app-current-weather>
-    }
-
-    @if (forecast) {
-        <app-forecast [forecast]="forecast"></app-forecast>
-    }
+    <!--RIGHT SIDE-->
+    <div class="side-bar">
+        <!--Weekly forecast-->
+        @if (forecast) {
+            <app-forecast [forecast]="forecast"></app-forecast>
+        }
+    </div>
    
 </div>
 
