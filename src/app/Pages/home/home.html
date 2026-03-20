@@ -1,5 +1,4 @@
 <div class="home-container">
-    <h1>Simplistic Weather Forecasting</h1>
 
     <!--LEFT SIDE -->
     <div class="main-column">
@@ -14,6 +13,11 @@
         <!--Current Weather-->
         @if (currentWeather) {
             <app-current-weather [weather]="currentWeather"></app-current-weather>
+        }
+
+        <!--Hourly Forecast-->
+        @if (hourlyForecast) {
+            <app-hourly-forecast [hourlyForecast]="hourlyForecast"></app-hourly-forecast>
         }
 
         <!--Error message-->

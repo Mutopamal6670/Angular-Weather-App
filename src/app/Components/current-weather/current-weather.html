@@ -1,12 +1,32 @@
 
-<div>
+<div class="current-weather-container">
     @if (weather) {
-        <p>City: {{weather.city}}</p>
-        <p>Temperature: {{weather.temperature}}</p>
-        <p>Humiditiy: {{weather.humidity}}</p>
-        <p>Windspeed: {{weather.windSpeed}}</p>
-        <p>Description: {{weather.description}}</p>
-        <img src="{{weather.icon}}" alt="weather icon">
+        <div class="container-one">
+            <div class="in-brief">
+                <h3>{{weather.city}}</h3>
+                <p class="Description">{{weather.description}}</p>
+                <h4 class="Temperature">{{weather.temperature}}°</h4>
+            </div>
+
+            <div class="img-container">
+                <img src="{{weather.icon}}" alt="weather icon">
+            </div>
+        </div>
+
+        <div class="container-two">
+            <h4>AIR CONDITIONS</h4>
+            <p>Humiditiy: {{weather.humidity}}%</p>
+            <p>Windspeed: {{weather.windSpeed}} m/s</p>
+            <p>Description: {{weather.description}}</p>
+        </div>
+       
+
+        
+        
+        
+        
+        
+        
     }
     
 </div>

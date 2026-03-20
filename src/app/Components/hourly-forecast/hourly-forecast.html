@@ -1,1 +1,13 @@
-<p>hourly-forecast works!</p>
+
+
+@if(hourlyForecast) {
+    <div class="hourly-container">
+        @for (item of hourlyForecast; track item.time) {
+            <div class="item">
+                 <p>{{item.time}}</p>
+                <img src="{{item.icon}}" alt="weather icon">
+                <p>{{item.temperature}}°C</p>
+            </div>
+        }
+    </div> 
+}

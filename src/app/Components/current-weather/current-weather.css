@@ -1,0 +1,27 @@
+.current-weather-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+
+    border: solid;  /*to be deleted*/
+}
+
+.container-one {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.in-brief {
+    width: 50%;
+}
+
+.img-container {
+    width: 50%;
+    align-items: center;
+}
+
+.img-container img {
+    width: 50%;
+    height: 100%;
+}

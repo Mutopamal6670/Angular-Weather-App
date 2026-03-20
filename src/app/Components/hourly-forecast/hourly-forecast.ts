@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HourlyForecastModel } from '../../Models/weather.model';
 
 @Component({
   selector: 'app-hourly-forecast',
@@ -8,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class HourlyForecast {
 
+  @Input() hourlyForecast?: HourlyForecastModel[] | null = null;
 }

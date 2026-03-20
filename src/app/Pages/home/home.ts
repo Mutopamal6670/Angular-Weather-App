@@ -1,14 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { Search } from "../../Components/search/search";
 import { CurrentWeather } from '../../Components/current-weather/current-weather';
-import { CurrentWeatherModel, WeatherForecast } from '../../Models/weather.model';
+import { CurrentWeatherModel, HourlyForecastModel, WeatherForecast } from '../../Models/weather.model';
 import { WeatherService } from '../../Services/weather-service';
 import { Forecast } from "../../Components/forecast/forecast";
+import { HourlyForecast } from "../../Components/hourly-forecast/hourly-forecast";
 
 
 @Component({
   selector: 'app-home',
-  imports: [Search, CurrentWeather, Forecast],
+  imports: [Search, CurrentWeather, Forecast, HourlyForecast],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -20,12 +21,14 @@ export class Home {
   //they facilitate data holding
   currentWeather: CurrentWeatherModel | null = null;
   forecast: WeatherForecast | null = null;
+  hourlyForecast: HourlyForecastModel[] | null = null;
   loading: boolean = false;
   errorMessage: string = '';
 
   resetWeatherData() : void {
     this.currentWeather = null;
     this.forecast = null;
+    this.hourlyForecast = null;
     this.errorMessage = '';
   }
 
@@ -42,6 +45,7 @@ export class Home {
         console.log(data);  //for debugging
         this.currentWeather = data.current;
         this.forecast = data.forecast;
+        this.hourlyForecast =data.hourlyForecast;
         this.loading = false;
       },
       error: err => {

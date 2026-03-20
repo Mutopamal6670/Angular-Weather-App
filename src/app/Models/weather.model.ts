@@ -18,3 +18,9 @@ export interface WeatherForecast {
     city: string;
     days: ForecasteDay[];
 }
+
+export interface HourlyForecastModel {
+    time: string;
+    icon: string;
+    temperature: number;
+}
