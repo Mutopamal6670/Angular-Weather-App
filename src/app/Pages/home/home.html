@@ -10,21 +10,22 @@
             <p>Loading...</p>
         }
 
-        <!--Current Weather-->
-        @if (currentWeather) {
-            <app-current-weather [weather]="currentWeather"></app-current-weather>
-        }
+        <div class="aboutToday">
+            <!--Current Weather-->
+            @if (currentWeather) {
+                <app-current-weather [weather]="currentWeather"></app-current-weather>
+            }
 
-        <!--Hourly Forecast-->
-        @if (hourlyForecast) {
-            <app-hourly-forecast [hourlyForecast]="hourlyForecast"></app-hourly-forecast>
-        }
+            <!--Hourly Forecast-->
+            @if (hourlyForecast) {
+                <app-hourly-forecast [hourlyForecast]="hourlyForecast"></app-hourly-forecast>
+            }
 
-        <!--Error message-->
-        @if (errorMessage) {
-            <p>{{ errorMessage }}</p>
-        }
-
+            <!--Error message-->
+            @if (errorMessage) {
+                <p>{{ errorMessage }}</p>
+            }
+        </div>
     </div>
 
     <!--RIGHT SIDE-->

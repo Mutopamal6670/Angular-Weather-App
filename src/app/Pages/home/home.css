@@ -2,16 +2,22 @@
     display: flex;
     gap: 20px;
     padding: 20px;
-    height: 100vh;
+    height: auto;
     border: solid;  /*to be removed*/
 }
 
 .main-column {
     flex: 2;
-    border: solid;  /*to be removed*/
+    /*border: solid;  /*to be removed*/
+}
+
+.aboutToday {
+    height: auto;
+    border: solid;  /*to be deleted*/
 }
 
 .side-bar {
     flex: 1;
+    height: 800px;
     border: solid;  /*to be removed*/
 }

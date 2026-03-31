@@ -15,18 +15,29 @@
 
         <div class="container-two">
             <h4>AIR CONDITIONS</h4>
-            <p>Humiditiy: {{weather.humidity}}%</p>
-            <p>Windspeed: {{weather.windSpeed}} m/s</p>
-            <p>Description: {{weather.description}}</p>
-        </div>
-       
+            <div class="weather-items">
+                <div id="item1">
+                    <p>Real Feel</p>
+                    <p>{{weather.temperature}}°C</p>
+                </div>
 
-        
-        
-        
-        
-        
-        
+                <div id="item2">
+                    <p>Humiditiy</p>
+                    <p>{{weather.humidity}}%</p>
+                </div>
+
+                <div id="item3">
+                    <p>Windspeed</p>
+                    <p>{{weather.windSpeed}} m/s</p>
+                </div>
+
+                <div id="item4">
+                    <p>Description</p>
+                    <p>{{weather.description}}</p>
+                </div>
+            </div>
+           
+        </div>   
     }
     
 </div>

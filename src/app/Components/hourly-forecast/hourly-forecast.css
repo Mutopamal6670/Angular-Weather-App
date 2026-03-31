@@ -1,6 +1,13 @@
 .hourly-container {
-    border: solid;  /*to be deleted*/
+    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
+    height: auto;
+    /*border: solid;  /*to be deleted*/
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 200px;
+    grid-template-rows: 150px;
+
+    background: #272f3d;
+    /*height: auto;*/
+    border-radius: 20px;
 }
