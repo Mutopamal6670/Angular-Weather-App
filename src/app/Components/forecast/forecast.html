@@ -1,10 +1,15 @@
-{{forecast}}
-
 @if(forecast){
-    @for (item of forecast.days; track item.date) {
-        <p>Date: {{item.date | date: 'EEEE'}}</p>
-        <p>Temperature: {{item.temperature}}°C</p>
-        <p>Description: {{item.description}}</p>
-        <img src="{{item.icon}}" alt="weather icon">
-    }
+    <div class="forecast-Container">
+        @for (item of forecast.days; track item.date) {
+            <div class="day">
+                <p class="day-item" id="date">{{item.date | date: 'EEE'}}</p>
+                <div class="day-item" id="img-container">
+                    <img src="{{item.icon}}" alt="weather icon" id="image">
+                </div>
+                <p class="day-item" id="description">{{item.description}}</p>
+                <p class="day-item" id="temp">{{item.temperature}}°C</p>  
+            </div> 
+            <hr class="divider"> 
+        }
+    </div>  
 }
