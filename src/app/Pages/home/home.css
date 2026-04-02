@@ -2,22 +2,72 @@
     display: flex;
     gap: 20px;
     padding: 20px;
-    height: auto;
+    height: 100dvh;
     border: solid;  /*to be removed*/
 }
 
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 4.5fr 3fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "appNavArea1 searchArea area2"
+        "leftArea centralArea rightArea";
+}
+
+.searchColumn {
+    grid-area: searchArea;
+    /*border: solid;  /*to be removed*/
+}
+
+
+/*STYLING THE CENTRAL PART*/
 .main-column {
-    flex: 2;
+    grid-area: centralArea;
+    grid-column: 2 / 3;
+    grid-row: 2 / -1;
+    display: flex;
     /*border: solid;  /*to be removed*/
 }
 
 .aboutToday {
-    height: auto;
-    border: solid;  /*to be deleted*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    /*border: solid red;  /*to be removed*/
 }
 
-.side-bar {
-    flex: 1;
-    height: 800px;
-    border: solid;  /*to be removed*/
+.current {
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.hourly {
+    padding-top: 20px;
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+
+
+/*STYLING THE RIGHT PART*/
+.right-side-bar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+
+    /*border: solid green;  /*to be removed*/
+}
+
+.weekly {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    /*border: solid yellow;   /*to be deleted*/
 }

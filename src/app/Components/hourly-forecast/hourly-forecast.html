@@ -5,10 +5,13 @@
         @for (item of hourlyForecast; track item.time) {
             <div class="item">
                  <p>{{item.time}}</p>
-                <img src="{{item.icon}}" alt="weather icon">
-                <p>{{item.temperature}}°C</p>
+                 <div class="cont-img">
+                    <img src="{{item.icon}}" alt="weather icon">
+                 </div>
+            
+                <p id="temp">{{item.temperature}}°C</p>
             </div>
-            <hr>
+            <hr class="hr-line">
         }
     </div> 
 }

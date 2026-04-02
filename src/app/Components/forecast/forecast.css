@@ -26,6 +26,7 @@
     margin-top: 5px;
     height: 80px;
     width: 25%;
+    color: rgb(133, 132, 132);
 }
 
 #img-container {
@@ -34,11 +35,11 @@
 }
 
 #date {
-    color: rgb(206, 202, 202);
+    color: rgb(133, 132, 132);
 }
 
 #image {
-    border: solid;  /*to be deleted*/
+    /*border: solid;  /*to be deleted*/
     width: 100%;
     height: 100%;
 }

@@ -1,10 +1,18 @@
 <div class="home-container">
 
     <!--LEFT SIDE -->
-    <div class="main-column">
+    <div class="appNavigation">
+        <!--Write the logic-->
+    </div>
+
+    <!--CENTRE -->
+    <div class="searchColumn">
         <!--Search component-->
         <app-search (citySearch)="searchedCity($event)"></app-search>
+    </div>
 
+
+    <div class="main-column">
         <!--Loading spinner-->
         @if (loading) {
             <p>Loading...</p>
@@ -13,12 +21,18 @@
         <div class="aboutToday">
             <!--Current Weather-->
             @if (currentWeather) {
-                <app-current-weather [weather]="currentWeather"></app-current-weather>
+                <div class="current">
+                    <app-current-weather [weather]="currentWeather"></app-current-weather>
+                </div>
+                
             }
 
             <!--Hourly Forecast-->
             @if (hourlyForecast) {
-                <app-hourly-forecast [hourlyForecast]="hourlyForecast"></app-hourly-forecast>
+                <div class="hourly">
+                    <app-hourly-forecast [hourlyForecast]="hourlyForecast"></app-hourly-forecast>
+                </div>
+                
             }
 
             <!--Error message-->
@@ -29,10 +43,13 @@
     </div>
 
     <!--RIGHT SIDE-->
-    <div class="side-bar">
+    <div class="right-side-bar">
         <!--Weekly forecast-->
         @if (forecast) {
-            <app-forecast [forecast]="forecast"></app-forecast>
+            <div class="weekly">
+                <app-forecast [forecast]="forecast"></app-forecast>
+            </div>
+            
         }
     </div>
    
