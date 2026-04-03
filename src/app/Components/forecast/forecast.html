@@ -1,5 +1,11 @@
 @if(forecast){
     <div class="forecast-Container">
+        <div class="heading">
+            <h2>SIX-DAY FORECAST</h2>
+            <h3>Daily Weather in brief</h3>
+        </div>
+        <hr class="divider">
+        
         @for (item of forecast.days; track item.date) {
             <div class="day">
                 <p class="day-item" id="date">{{item.date | date: 'EEE'}}</p>

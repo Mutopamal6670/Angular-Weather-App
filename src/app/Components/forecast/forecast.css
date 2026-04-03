@@ -6,6 +6,25 @@
     border-radius: 20px;
 }
 
+.heading {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 20px;
+    height: 100px;
+    color: rgb(169, 165, 165);
+    justify-content: space-around;
+
+    /*border: solid;  /*to be deleted*/
+}
+
+.heading h2 {
+    font-weight: light;
+}
+
+.heading h3 {
+    font-weight: lighter;
+}
+
 .day {
     padding: 0 20px 0 20px;
     display: flex;

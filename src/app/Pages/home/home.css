@@ -3,7 +3,8 @@
     gap: 20px;
     padding: 20px;
     height: 100dvh;
-    border: solid;  /*to be removed*/
+    
+    /*border: solid;  /*to be removed*/
 }
 
 .home-container {
@@ -14,6 +15,10 @@
         "leftArea centralArea rightArea";
 }
 
+appNavigation {
+    border: solid;
+    background-color: #272f3d;
+}
 .searchColumn {
     grid-area: searchArea;
     /*border: solid;  /*to be removed*/
