@@ -1,0 +1,34 @@
+.nav-bar {
+    padding: 5px 20px 5px 20;
+    display: flex;
+    justify-content: space-between;
+    /*background-color: #4f596a;*/
+    background: linear-gradient(135deg, #554d79, #433d81);
+    border-radius: 15px;
+
+    /*border: solid;  /*to be deleted*/
+}
+
+.nav-items {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item {
+    /*color: white;*/
+    list-style: none;
+}
+
+.item a {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.site-name {
+    padding: 5px 20px 5px 20px;
+    font-weight: light;
+}
+
