@@ -9,10 +9,10 @@
 
 .home-container {
     display: grid;
-    grid-template-columns: 1fr 4.5fr 3fr;
+    grid-template-columns: 4.5fr 3fr;
     grid-template-rows: 1fr 4fr;
-    grid-template-areas: "appNavArea1 searchArea area2"
-        "leftArea centralArea rightArea";
+    grid-template-areas: "searchArea area2"
+        "centralArea rightArea";
 }
 
 appNavigation {
@@ -28,7 +28,7 @@ appNavigation {
 /*STYLING THE CENTRAL PART*/
 .main-column {
     grid-area: centralArea;
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
     grid-row: 2 / -1;
     display: flex;
     /*border: solid;  /*to be removed*/
@@ -63,7 +63,7 @@ appNavigation {
     padding: 0;
     display: flex;
     justify-content: center;
-    grid-column: 3 / 4;
+    grid-column: 2 / 3;
     grid-row: 1 / -1;
 
     /*border: solid green;  /*to be removed*/

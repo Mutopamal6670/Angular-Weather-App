@@ -20,6 +20,12 @@
 
         <div class="aboutToday">
             <!--Current Weather-->
+            @if(!currentWeather) {
+                <div class="welcome-page">
+                    <app-welcome></app-welcome>
+                </div>
+            }
+
             @if (currentWeather) {
                 <div class="current">
                     <app-current-weather [weather]="currentWeather"></app-current-weather>

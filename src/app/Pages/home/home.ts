@@ -5,11 +5,11 @@ import { CurrentWeatherModel, HourlyForecastModel, WeatherForecast } from '../..
 import { WeatherService } from '../../Services/weather-service';
 import { Forecast } from "../../Components/forecast/forecast";
 import { HourlyForecast } from "../../Components/hourly-forecast/hourly-forecast";
-
+import { Welcome } from '../welcome/welcome';
 
 @Component({
   selector: 'app-home',
-  imports: [Search, CurrentWeather, Forecast, HourlyForecast],
+  imports: [Search, CurrentWeather, Forecast, HourlyForecast, Welcome],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

@@ -1,0 +1,17 @@
+.welcome_container {
+    display: flex;
+    min-height: 300px;
+
+}
+
+.cont_ainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.stment {
+    font-size: 1.8rem;
+    fon
+}
