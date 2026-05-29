@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Search } from "../../Components/search/search";
 import { CurrentWeather } from '../../Components/current-weather/current-weather';
 import { CurrentWeatherModel, HourlyForecastModel, WeatherForecast } from '../../Models/weather.model';
@@ -6,6 +6,9 @@ import { WeatherService } from '../../Services/weather-service';
 import { Forecast } from "../../Components/forecast/forecast";
 import { HourlyForecast } from "../../Components/hourly-forecast/hourly-forecast";
 import { Welcome } from '../welcome/welcome';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map, startWith } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +17,14 @@ import { Welcome } from '../welcome/welcome';
   styleUrl: './home.css',
 })
 export class Home {
+
+  private breakPointObserver = inject(BreakpointObserver);
+  isMobile = toSignal(
+    this.breakPointObserver.observe(Breakpoints.HandsetPortrait).pipe(map(result => result.matches), startWith(false))
+  );
+
+  
+
 
   private readonly weatherService = inject(WeatherService);
 

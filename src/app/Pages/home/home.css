@@ -1,27 +1,27 @@
-.home-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    height: 120dvh;
-    
-    /*border: solid;  /*to be removed*/
-}
-
-.home-container {
+.main-container {
     display: grid;
     grid-template-columns: 4.5fr 3fr;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: "searchArea area2"
         "centralArea rightArea";
+
+    min-height: 600px;
 }
+ .main-container.mobile-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
 
 appNavigation {
     border: solid;
     background-color: #272f3d;
 }
 .searchColumn {
+    margin: 20px 0 20px 0;
     grid-area: searchArea;
-    /*border: solid;  /*to be removed*/
+    min-width: 100%;
+    border: solid;  /*to be removed*/
 }
 
 
@@ -31,7 +31,7 @@ appNavigation {
     grid-column: 1 / 2;
     grid-row: 2 / -1;
     display: flex;
-    /*border: solid;  /*to be removed*/
+    border: solid blue;  /*to be removed*/
 }
 
 .aboutToday {
@@ -39,7 +39,7 @@ appNavigation {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
-    /*border: solid red;  /*to be removed*/
+    border: solid red;  /*to be removed*/
 }
 
 .current {
@@ -66,7 +66,7 @@ appNavigation {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
 
-    /*border: solid green;  /*to be removed*/
+    border: solid green;  /*to be removed*/
 }
 
 .weekly {
@@ -74,5 +74,5 @@ appNavigation {
     padding: 0;
     width: 100%;
 
-    /*border: solid yellow;   /*to be deleted*/
+    border: solid yellow;   /*to be deleted*/
 }
