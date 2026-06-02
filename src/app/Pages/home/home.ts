@@ -20,11 +20,12 @@ export class Home {
 
   private breakPointObserver = inject(BreakpointObserver);
   isMobile = toSignal(
-    this.breakPointObserver.observe(Breakpoints.HandsetPortrait).pipe(map(result => result.matches), startWith(false))
+    this.breakPointObserver.observe([Breakpoints.HandsetPortrait, Breakpoints.HandsetLandscape]).pipe(map(result => result.matches), startWith(false))
   );
 
-  
-
+  isTablet = toSignal(
+    this.breakPointObserver.observe([Breakpoints.Tablet, Breakpoints.TabletPortrait]).pipe(map(result => result.matches), startWith(false))
+  )
 
   private readonly weatherService = inject(WeatherService);
 

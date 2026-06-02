@@ -1,17 +1,19 @@
-<div class="main-container" [class.mobile-layout]="isMobile()" [class.desktop-layout]="!isMobile()">
+<div class="main-container" [class.mobile-layout]="isMobile()" [class.desktop-layout]="!isMobile()" [class.tablet-layout]="isTablet()">
     <!--LEFT SIDE -->
-    <div class="appNavigation">
-        <!--Write the logic-->
-    </div>
+    <!-- <div class="appNavigation">
+        <!-Write the logic-->
+    <!-- </div> -->
 
-    <!--CENTRE -->
-    <div class="searchColumn">
+    <!--CENTRE 
+    contains the searchColumn, and the main-column-->
+
+    <div class="searchColumn" [class.mobile-layout]="isMobile()">
         <!--Search component-->
         <app-search (citySearch)="searchedCity($event)"></app-search>
     </div>
 
 
-    <div class="main-column">
+    <div class="main-column" [class.mobile-layout]="isMobile()">
         <!--Loading spinner-->
         @if (loading) {
             <p>Loading...</p>
@@ -26,7 +28,7 @@
             }
 
             @if (currentWeather) {
-                <div class="current">
+                <div class="current" [class.mobile-layout]="isMobile()">
                     <app-current-weather [weather]="currentWeather"></app-current-weather>
                 </div>
                 
@@ -34,7 +36,7 @@
 
             <!--Hourly Forecast-->
             @if (hourlyForecast) {
-                <div class="hourly">
+                <div class="hourly" [class.mobile-layout]="isMobile()">
                     <app-hourly-forecast [hourlyForecast]="hourlyForecast"></app-hourly-forecast>
                 </div>
                 
@@ -48,10 +50,10 @@
     </div>
 
     <!--RIGHT SIDE-->
-    <div class="right-side-bar">
+    <div class="right-side-bar" [class.mobile-layout]="isMobile()">
         <!--Weekly forecast-->
         @if (forecast) {
-            <div class="weekly">
+            <div class="weekly" [class.mobile-layout]="isMobile()">
                 <app-forecast [forecast]="forecast"></app-forecast>
             </div>
             
