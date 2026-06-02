@@ -1,5 +1,8 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { map, startWith } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -8,6 +11,19 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
   styleUrl: './search.css',
 })
 export class Search {
+
+  private breakPointObserver = inject(BreakpointObserver);
+  isMobile = toSignal(
+    this.breakPointObserver.observe(Breakpoints.HandsetPortrait).pipe(map(result => result.matches), startWith(false))
+  );
+
+  isMobiPortrait = toSignal(
+    this.breakPointObserver.observe(Breakpoints.HandsetLandscape).pipe(map(result => result.matches), startWith(false))
+  );
+
+  isTablet = toSignal(
+    this.breakPointObserver.observe([Breakpoints.Tablet, Breakpoints.TabletPortrait]).pipe(map(result => result.matches), startWith(false))
+  )
 
   private readonly form_build = inject(FormBuilder);
 

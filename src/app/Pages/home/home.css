@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    border: solid yellow; /*to be removed*/
  }
 
  .main-container.tablet-layout {
@@ -29,13 +28,13 @@ appNavigation {
     margin: 20px 0 20px 0;
     grid-area: searchArea;
     min-width: 100%;
-    border: solid;  /*to be removed*/
+    
 }
 
 .searchColumn.mobile-layout {
     margin: 0 20px 0 10px;
     width: 90%;
-    border: solid yellow; /*to be removed*/
+   
 }
 
 
@@ -45,7 +44,7 @@ appNavigation {
     grid-column: 1 / 2;
     grid-row: 2 / -1;
     display: flex;
-    border: solid blue;  /*to be removed*/
+    
 }
 
 .main-column.mobile-layout {
@@ -57,7 +56,7 @@ appNavigation {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
-    border: solid red;  /*to be removed*/
+    
 }
 
 .current {
@@ -84,7 +83,7 @@ appNavigation {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
 
-    border: solid green;  /*to be removed*/
+    
 }
 
 .right-side-bar.mobile-layout {
@@ -97,5 +96,5 @@ appNavigation {
     margin: 0;
     padding: 0;
     width: 100%;
-    border: solid yellow;   /*to be deleted*/
+    
 }

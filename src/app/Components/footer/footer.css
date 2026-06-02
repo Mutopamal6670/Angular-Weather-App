@@ -11,6 +11,16 @@
     /*border: solid;  /*to be deleted*/
 }
 
+.footer_container.mobile-layout {
+    margin: 20px 10px 0 10px;
+    border: solid wheat;
+}
+
+.footer_container.mobile-portrait {
+    display: flex;
+    margin: 20px 10px 0 10px;
+}
+
 #footer_logo {
     color: #fff;
     display: flex;
@@ -30,6 +40,12 @@
 .footer_link-wrapper {
     display: flex;
 
+}
+
+.footer_link-wrapper.mobile-layout {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .footer_links-iterms {

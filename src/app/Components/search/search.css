@@ -1,3 +1,13 @@
+.input-container.mobile-layout,  .input-container._form.mobile-portrait{
+    margin: 10px 10px 0 0;
+    /* border: solid pink; to be removed */
+}
+
+._form.mobile-layout, ._form.mobile-portrait {
+    margin: 10px 10px 0 0;
+    /* border: solid pink; /*to be removed */
+}
+
 .input-container input {
     padding: 20px;
     margin: 0 0 20px 0;
@@ -9,6 +19,16 @@
 
     font-size: 100%;
     font-family: inherit;
+}
+
+.input-container.mobile-layout input {
+    width: 60%;
+    
+}
+
+
+.input-container.mobile-portrait input {
+    width: 60%;
 }
 
 #submitBtn {
@@ -23,4 +43,9 @@
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+
+#submitBtn.mobile-layout {
+    font-size: 15px;
+    width: 30%;
 }

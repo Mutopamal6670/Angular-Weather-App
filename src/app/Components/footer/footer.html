@@ -1,8 +1,8 @@
 <footer>
-    <div class="footer_container">
+    <div class="footer_container" [class.mobile-layout]="isMobile()" [class.tablet-layout]="isTablet()", [class.mobile-portrait]="isMobiPortrait()">
         <hr class="divider">
         <div class="footer_links">
-            <div class="footer_link-wrapper">
+            <div class="footer_link-wrapper" [class.mobile-layout]="isMobile()" [class.tablet-layout]="isTablet()">
                 <div class="footer_links-iterms">
                     <h2>About Us</h2>
                     <a href="/">Contact</a>
