@@ -1,8 +1,24 @@
-<nav class="nav-bar">
-    <h2 class="site-name">Simplistic Weather Forecast</h2>
-    <ul class="nav-items">
-        <li class="item"><a href="/src/app/Pages/home/home.html">Home</a></li>
-        <li class="item"><a href="#">About Me</a></li>
-        <li class="item"><a href="#">My Portifolio</a></li>
-    </ul>
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand-custom" routerLink="/">Simplistic Weather Forecast</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navabar-nav nav-links-right">
+                <li class="nav-item">
+                    <a class="custom-nav-link" routerLink="/src/app/Pages/home/home.html" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="custom-nav-link" routerLink="#">About Me</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="custom-nav-link" routerLink="#">My Portfolio</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
 </nav>
