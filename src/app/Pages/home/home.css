@@ -76,7 +76,7 @@ appNavigation {
 
 /*STYLING THE RIGHT PART*/
 .right-side-bar {
-    margin: 0;
+    margin: 20px 15px 0 15px;
     padding: 0;
     display: flex;
     justify-content: center;
