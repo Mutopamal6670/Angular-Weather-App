@@ -1,18 +1,46 @@
 <div class="welcome-container">
-    <div class="cont_ainer">
-        <h2>{{ userCity }}</h2>
-
-        <h1 class="clock_display">
-            {{ currentTime | date: 'hh:mm:ss a' }}
-        </h1>
-
-        <p class="date-display">
-            {{ currentTime | date: 'fullDate' }}
-        </p>
+    <div class="location">
+        <div class="location-card">
+            <div class="heading">
+                <h4 class="text-light display-6" id="tag-1">Live Location:</h4>
+            </div>
+            <div class="loc-info">
+                <div class="city-date">
+                    <p class="text-white city-name" id="tag-2">{{ userCity }}</p>
+                    
+                </div>
+                <div class="city-time">
+                    <p class="text-white date-display">
+                        {{ currentTime | date: 'fullDate' }}
+                    </p>
+                    <p class="text-light clock_display" >
+                        {{ currentTime | date: 'hh:mm:ss a' }}
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <h2>Your Best Friend for all your weather updates</h2>
-    <p class="stment">Worried about how the weather today will be like?</p>
-    <p class="stment">Worry no more and look no further. 
-    <p class="stment">Just enter the name of the city or town you wish to earch for and you will get all the up-to-date waether forecast, all at your fingertips. Isn't it great?</p>
+
+    <div class="container-fluid cards-container">
+        <div class="card">
+            <h4 class="text-light" id="tag-1">Personalised</h4>
+            <p class="text-white" id="tag-2">Get personalised up-to-date weather forecasts for your specified city. </p>
+            
+        </div>
+
+        <div class="card">
+            <h4 class="text-light" id="tag-1">Robust</h4>
+            <p class="text-white" id="tag-2">We believe in the preciousness of your time. Our platform processes your request in less than a second.</p>
+        </div>
+
+        <div class="card">
+            <h4 class="text-light" id="tag-1">Daily Tips</h4>
+            <p class="text-white" id="tag-2">To help you make an informed decision, we offer you tips and suggestions to help you save time in choosing your outfit for the day</p>
+        </div>
+    </div>
+
+    <div class="get-started-btn-container" [class.hidden-btn]="isHidden">
+        <a class="text-decoration-none get-started" routerLink="/home">Get Started</a>
+    </div>
+
 </div>

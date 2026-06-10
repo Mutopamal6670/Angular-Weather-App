@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { DatePipe } from '@angular/common';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
-  imports: [DatePipe],
+  imports: [DatePipe, RouterLink, RouterLinkActive],
   templateUrl: './welcome.html',
   styleUrl: './welcome.css',
 })
@@ -13,6 +14,9 @@ export class Welcome {
   currentTime: Date = new Date();
   userTimeZone: string = '';
   userCity: string = '';
+  userCountry: string = '';
+
+  isHidden = signal<boolean>(false);
     
   private clockSubscription!: Subscription;
     
@@ -22,6 +26,8 @@ export class Welcome {
     
     //Clean up thee string to show just the city name
     this.userCity = this.userTimeZone.split('/').pop()?.replace('_', ' ') || 'Your City';
+
+    this.userCountry = this.userTimeZone.split('/').pop()?.replace('_', ' ') || 'Your Country';
     
     //2. Creta a timer that ticks ever second(0 delay, 1000ms interval)
     this.clockSubscription = timer(0, 1000)
@@ -37,5 +43,10 @@ export class Welcome {
     if(this.clockSubscription) {
       this.clockSubscription.unsubscribe();
     }
+  }
+
+  hide(): void {
+
+    this.isHidden.update(currentValue => !currentValue);
   }
 }

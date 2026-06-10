@@ -11,14 +11,12 @@
         <!--Search component-->
         <app-search (citySearch)="searchedCity($event)"></app-search>
     </div>
-
-
-    <div class="main-column" [class.mobile-layout]="isMobile()">
-        <!--Loading spinner-->
-        @if (loading) {
+    <!--Loading spinner-->
+    @if (loading) {
             <p>Loading...</p>
         }
 
+    <div class="main-column" [class.mobile-layout]="isMobile()">
         <div class="aboutToday">
             <!--Current Weather-->
             @if(!currentWeather) {
