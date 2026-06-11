@@ -16,8 +16,6 @@ export class Welcome {
   userCity: string = '';
   userCountry: string = '';
 
-  isHidden = signal<boolean>(false);
-    
   private clockSubscription!: Subscription;
     
   ngOnInit(): void {
@@ -45,8 +43,4 @@ export class Welcome {
     }
   }
 
-  hide(): void {
-
-    this.isHidden.update(currentValue => !currentValue);
-  }
 }
