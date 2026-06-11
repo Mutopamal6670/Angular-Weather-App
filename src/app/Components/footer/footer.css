@@ -13,7 +13,7 @@
 
 .footer_container.mobile-layout {
     margin: 20px 10px 0 10px;
-    border: solid wheat;
+    /* border: solid wheat; */
 }
 
 .footer_container.mobile-portrait {
@@ -109,6 +109,11 @@
     margin: 40px auto 0 auto;
 }
 
+.social_media-wrap.mobile-layout {
+    display: flex;
+    flex-direction: column;
+}
+
 .social_icons {
     display: flex;
     justify-content: space-between;
@@ -130,4 +135,8 @@
 
 .website_rights{
     color: #fff;
+}
+
+.website_rights.mobile-layout{
+    font-size: xx-small;
 }

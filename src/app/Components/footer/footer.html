@@ -23,11 +23,11 @@
             </div>
         </div>
         <div class="social_media">
-            <div class="social_media-wrap">
+            <div class="social_media-wrap" [class.mobile-layout]="isMobile()">
                 <div class="footer_logo">
                     <a href="/" id="footer_logo">Simplicity</a>
                 </div>
-                <p class="website_rights">&copy;Malvin Runhare 2026. All rights reserved
+                <p class="website_rights" [class.mobile-layout]="isMobile()">&copy;Malvin Runhare 2026. All rights reserved
                 </p>
                 <div class="social_icons">
                      <a href="/" class="social_icon-link" target="_blank">
