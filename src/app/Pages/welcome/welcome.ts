@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, startWith } from 'rxjs/operators';
 import { DatePipe } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-welcome',
-  imports: [DatePipe, RouterLink, RouterLinkActive],
+  imports: [DatePipe, RouterLink],
   templateUrl: './welcome.html',
   styleUrl: './welcome.css',
 })
@@ -17,7 +19,18 @@ export class Welcome {
   userCountry: string = '';
 
   private clockSubscription!: Subscription;
-    
+
+  private breakPointObserver = inject(BreakpointObserver);
+
+  isMobile = toSignal(
+    this.breakPointObserver.observe(Breakpoints.Handset).pipe(map(result => result.matches), startWith(false))
+  );
+
+  isMobLandscape = toSignal(
+    this.breakPointObserver.observe(Breakpoints.HandsetLandscape).pipe(map(result => result.matches), startWith(false))
+  )
+
+   
   ngOnInit(): void {
      //1. Get user's explicit timezone from the browser
     this.userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;

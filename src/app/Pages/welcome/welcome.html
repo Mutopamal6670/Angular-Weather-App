@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div class="container-fluid cards-container">
+    <div class="container-fluid cards-container" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
         <div class="card">
             <h4 class="text-light" id="tag-1">Personalised</h4>
             <p class="text-white" id="tag-2">Get personalised up-to-date weather forecasts for your specified city. </p>

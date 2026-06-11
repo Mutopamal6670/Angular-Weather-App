@@ -44,6 +44,13 @@
     display: flex
     
 }
+
+.cards-container.mobile-layout {
+    flex-direction: column;
+}
+
+
+
 .card {
     margin: 5px 5px;
     width: 30%;
