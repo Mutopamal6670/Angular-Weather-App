@@ -1,4 +1,4 @@
-<div class="welcome-container">
+<div class="welcome-container" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
     <div class="location" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
         <div class="location-card" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
             <div class="heading">
@@ -22,7 +22,7 @@
     </div>
 
     <div class="container-fluid cards-container" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
-        <div class="card">
+        <div class="card" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
             <h4 class="text-light" id="tag-1">Personalised</h4>
             <p class="text-white" id="tag-2">Get personalised up-to-date weather forecasts for your specified city. </p>
             
