@@ -17,7 +17,7 @@
         }
 
     <div class="main-column" [class.mobile-layout]="isMobile()">
-        <div class="aboutToday">
+        <div class="aboutToday" [class.mobile-layout]="isMobile()">
             <!--Current Weather-->
             @if(!currentWeather) {
                 <div class="welcome-page">

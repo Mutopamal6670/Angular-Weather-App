@@ -56,7 +56,12 @@ appNavigation {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
-    
+    height: auto;
+}
+
+.aboutToday.mobile-layout {
+    display: flex;
+    height: auto;
 }
 
 .current {
@@ -98,3 +103,9 @@ appNavigation {
     width: 100%;
     
 }
+
+
+/* .welcome-page {
+    border: solid green;
+    height: 100%;
+} */
