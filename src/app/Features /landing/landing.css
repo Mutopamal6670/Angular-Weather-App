@@ -1,0 +1,107 @@
+
+/*the Landing container*/
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 300px;
+    height: auto;
+}
+
+        /*For mobile view*/
+.landing-container.mobile-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*THE CARDS-CONTAINER STYLES*/
+.cards-container {
+    display: flex 
+}
+
+.cards-container.mobile-layout {
+    flex-direction: column;
+}
+
+.cards-container.mobile-landscape {
+    flex-direction: row;
+    
+}
+
+
+.card {
+    margin: 5px 5px;
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card.mobile-layout {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.head-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.location.mobile-layout {
+    width: 100%;
+}
+
+.location-card {
+    height: auto;
+    display: flex;
+    flex-direction: column;  
+}
+
+.loc-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.city-name {
+    font-size: 2rem;
+}
+
+.cont_ainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.stment {
+    font-size: 1.8rem;
+}
+
+.get-started-btn-container {
+    margin: 5px;
+    padding: 20px;
+
+}
+.get-started {
+    width: 15%;
+    height: 45px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+
+    background: rgb(94, 94, 182);
+    background: linear-gradient(135deg, #665e8d, #4b458e);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}

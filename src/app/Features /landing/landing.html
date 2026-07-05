@@ -1,0 +1,30 @@
+<div class="landing-container" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
+    
+    <div class="head-container" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
+        <h5 class="cards-heading">Looking for detailed and reliable weather updates? Look no further</h5>
+    </div>
+
+    <div class="container-fluid d-flex flex-column flex-sm-row cards-container" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
+        
+        <div class="card" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
+            <h4 class="text-light" id="tag-1">Personalised</h4>
+            <p class="text-white" id="tag-2">Get personalised up-to-date weather forecasts for your specified city. </p>
+            
+        </div>
+
+        <div class="card" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
+            <h4 class="text-light" id="tag-1">Robust</h4>
+            <p class="text-white" id="tag-2">We believe in the preciousness of your time. Our platform processes your request in less than a second.</p>
+        </div>
+
+        <div class="card" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
+            <h4 class="text-light" id="tag-1">Daily Tips</h4>
+            <p class="text-white" id="tag-2">To help you make an informed decision, we offer you tips and suggestions to help you save time in choosing your outfit for the day</p>
+        </div>
+    </div>
+
+    <div class="get-started-btn-container" [class.mobile-layout]="isMobile()" [class.mobile-landscape]="isMobLandscape()">
+        <a class="text-decoration-none get-started" [routerLink]="['/dashboard']">Get Started</a>
+    </div>
+
+</div>

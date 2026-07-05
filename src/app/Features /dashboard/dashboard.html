@@ -1,0 +1,50 @@
+<div class="main-container" [class.mobile-layout]="isMobile()" [class.desktop-layout]="!isMobile()" [class.tablet-layout]="isTablet()">
+   
+    <div class="searchColumn" [class.mobile-layout]="isMobile()">
+        <!--Search component-->
+        <app-search (citySearch)="searchedCity($event)"></app-search>
+    </div>
+    <!--Loading spinner-->
+    @if (loading) {
+            <p>Loading...</p>
+        }
+
+    <div class="main-column" [class.mobile-layout]="isMobile()">
+        <div class="aboutToday" [class.mobile-layout]="isMobile()">
+            <!--Current Weather-->
+
+
+            @if (currentWeather) {
+                <div class="current" [class.mobile-layout]="isMobile()">
+                    <app-current-weather [weather]="currentWeather"></app-current-weather>
+                </div>
+                
+            }
+
+            <!--Hourly Forecast-->
+            @if (hourlyForecast) {
+                <div class="hourly" [class.mobile-layout]="isMobile()">
+                    <app-hourly-forecast [hourlyForecast]="hourlyForecast"></app-hourly-forecast>
+                </div>
+                
+            }
+
+            <!--Error message-->
+            @if (errorMessage) {
+                <p>{{ errorMessage }}</p>
+            }
+        </div>
+    </div>
+
+    <!--RIGHT SIDE-->
+    <div class="right-side-bar" [class.mobile-layout]="isMobile()">
+        <!--Weekly forecast-->
+        @if (forecast) {
+            <div class="weekly" [class.mobile-layout]="isMobile()">
+                <app-weekly-forecast [forecast]="forecast"></app-weekly-forecast>
+            </div>
+            
+        }
+    </div>
+   
+</div>

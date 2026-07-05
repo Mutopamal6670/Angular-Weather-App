@@ -1,0 +1,52 @@
+
+<div class="current-weather-container" [class.mobile-layout]="isMobile()">
+    @if (weather) {
+        <div class="container-one">
+            <div class="in-brief">
+                <h3 class="city_name" [class.mobile-layout]="isMobile()">{{weather.city}}</h3>
+                <p class="Description" [class.mobile-layout]="isMobile()">{{weather.description}}</p>
+                <h4 class="Temperature" [class.mobile-layout]="isMobile()">{{weather.temperature}}°C</h4>
+            </div>
+
+            <div class="img-container" [class.mobile-layout]="isMobile()">
+                <img src="{{weather.icon}}" alt="weather icon">
+            </div>
+        </div>
+
+        <div class="container-two">
+            <h4>AIR CONDITIONS</h4>
+            <div class="weather-items">
+                <div id="item1">
+                    <p>Real Feel</p>
+                
+                    <p class="info"
+                    [class.mobile-layout]="isMobile()"
+                    [style.font-size]="isMobile() ? '14px' : '20px'">{{weather.temperature}}°C</p>
+                </div>
+
+                <div id="item2">
+                    <p>Humiditiy</p>
+                    <p class="info"
+                    [class.mobile-layout]="isMobile()"
+                    [style.font-size]="isMobile() ? '14px' : '20px'">{{weather.humidity}}%</p>
+                </div>
+
+                <div id="item3">
+                    <p>Windspeed</p>
+                    <p class="info"
+                    [class.mobile-layout]="isMobile()"
+                    [style.font-size]="isMobile() ? '14px' : '20px'">{{weather.windSpeed}} m/s</p>
+                </div>
+
+                <div id="item4">
+                    <p>Description</p>
+                    <p class="info"
+                    [class.mobile-layout]="isMobile()"
+                    [style.font-size]="isMobile() ? '14px' : '20px'">{{weather.description}}</p>
+                </div>
+            </div>
+           
+        </div>   
+    }
+    
+</div>

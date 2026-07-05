@@ -1,0 +1,17 @@
+@if(hourlyForecast) {
+    <div class="d-flex flex-nowrap overflow-x-auto pb-2 hourly-container" [class.mobile-layout]="isMobile()" style="-webkit-overflow-scrolling: touch;">
+        @for (item of hourlyForecast; track item.time) {
+            <div class="px-3 flex-shrink-0 item">
+                 <p class="p_time" [class.mobile-layout]="isMobile()"
+                 [style.font-size]="isMobile() ? '12px' : '20px'">{{item.time}}</p>
+                 <div class="cont-img">
+                    <img src="{{item.icon}}" alt="weather icon">
+                 </div>
+            
+                <p class="p_temp"
+                 [class.mobile-layout]="isMobile()"
+                 [style.font-size]="isMobile() ? '14px' : '20px'" id="temp">{{item.temperature}}°C</p>
+            </div>
+        }
+    </div> 
+}

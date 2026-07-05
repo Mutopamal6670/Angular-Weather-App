@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid nav_container d-flex flex-sm-row " [class.mobile-portrait]="isMobile()" [class.mobile-landscape]="isMobileLandscape()">
+        <a class="navbar-brand-custom" [class.mobile-portrait]="isMobile()" [class.mobile-landscape]="isMobileLandscape()" routerLink="/">Simplistic Weather Forecast</a>
+        <button class="navbar-toggler p-1 fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navabar-nav nav-links-right flex-column align-items-end align-items-lg-start text-end text-lg-start flex-lg-row me-auto mb-2 mb-lg-0" [class.mobile-portrait]="isMobile()" [class.mobile-landscape]="isMobileLandscape()">
+                <li class="nav-item">
+                    <a class="custom-nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="custom-nav-link" routerLink="#">About Me</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="custom-nav-link" routerLink="#">My Portfolio</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
