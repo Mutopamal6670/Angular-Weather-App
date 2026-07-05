@@ -144,3 +144,13 @@ navList.mobile-portrait {
     display: flex;
     flex-direction: column;
 }
+
+
+.flex-column {
+    margin-top: 15px;
+}
+
+
+.flex-column .nav-item{
+    margin-bottom: 15px;
+}
